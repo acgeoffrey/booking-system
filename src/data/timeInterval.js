@@ -1,5 +1,28 @@
 import { DateTime, Duration } from 'luxon';
 
+let rooms = [
+  {
+    id: '1',
+    name: 'Room 1',
+  },
+  {
+    id: '2',
+    name: 'Room 2',
+  },
+  {
+    id: '3',
+    name: 'Room 3',
+  },
+  {
+    id: '4',
+    name: 'Room 4',
+  },
+  {
+    id: '5',
+    name: 'Room 5',
+  },
+];
+
 const startTime = '09:00';
 const endTime = '18:00';
 const interval = '00:30';
@@ -16,10 +39,20 @@ while (i < dateEnd) {
     time: `${i.toFormat('HH:mma')}-${i
       .plus(durationInterval)
       .toFormat('HH:mma')}`,
+    available: true,
+    user: '',
   });
   i = i.plus(durationInterval);
   id++;
 }
 
-// console.log(timeInterval);
-export default timeInterval;
+rooms = rooms.map((item) => {
+  return {
+    id: item.id,
+    name: item.name,
+    slots: timeInterval,
+  };
+});
+
+console.log(rooms);
+export default rooms;

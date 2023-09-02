@@ -77,5 +77,6 @@
 @media (max-width: 600px) {
   .allSlots {
     align-items: center;
+    justify-content: center;
   }
 }

@@ -5,6 +5,7 @@ import UserBookings from './UserBookings';
 function CurrentBookings() {
   const currentUser = useSelector((state) => state.user.currentUser);
 
+  // aggregating data to get the bookings of the user
   const rooms = useSelector((state) => state.booking.rooms);
   const userBookings = rooms.map((room) => {
     return {

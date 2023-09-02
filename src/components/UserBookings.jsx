@@ -9,6 +9,7 @@ function UserBookings({ booking }) {
 
   if (booking.slots?.length < 1) return null;
 
+  // handle delete booking
   function handleRemove(e, data) {
     e.preventDefault();
     dispatch(remove(data));

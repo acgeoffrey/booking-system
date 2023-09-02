@@ -33,7 +33,7 @@ const durationInterval = Duration.fromISOTime(interval);
 // Creating array of time intervals from 9am to 6pm
 let timeInterval = [];
 let i = DateTime.fromFormat(startTime, 'HH:mm');
-let id = 0;
+let id = 1;
 while (i < dateEnd) {
   timeInterval.push({
     id,

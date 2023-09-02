@@ -1,10 +1,11 @@
-import { Link, useParams } from 'react-router-dom';
-import styles from '../styles/room.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import Slot from '../components/Slot';
 import { useState } from 'react';
-import { bookRooms } from '../bookingSlice';
+import { Link, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { HiArrowLeft } from 'react-icons/hi2';
+
+import styles from '../styles/room.module.css';
+import Slot from '../components/Slot';
+import { bookRooms } from '../bookingSlice';
 
 function Room() {
   const params = useParams();
@@ -16,7 +17,7 @@ function Room() {
   const currentUser = useSelector((state) => state.user.currentUser);
 
   const [selectSlot, setSelectSlot] = useState(null);
-  console.log(roomDetails);
+  // console.log(roomDetails);
 
   function handleBook(e) {
     e.preventDefault();

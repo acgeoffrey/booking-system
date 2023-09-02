@@ -40,11 +40,37 @@ const bookingSlice = createSlice({
       state.rooms = rooms;
       state.isLoading = false;
     },
+
+    // delete bookings
+    remove(state, action) {
+      const rooms = state.rooms.map((room) => {
+        if (room.id === action.payload.id) {
+          return {
+            ...room,
+            slots: room.slots.map((slot) => {
+              if (slot.id === action.payload.slotId) {
+                return {
+                  ...slot,
+                  isTaken: '',
+                };
+              } else {
+                return slot;
+              }
+            }),
+          };
+        } else {
+          return room;
+        }
+      });
+
+      state.rooms = rooms;
+      state.isLoading = false;
+    },
   },
 });
 
 // Export action creators
-export const { setLoading, addUser, bookRooms, logout } = bookingSlice.actions;
+export const { setLoading, bookRooms, remove } = bookingSlice.actions;
 
 // Export Reducer
 export default bookingSlice.reducer;

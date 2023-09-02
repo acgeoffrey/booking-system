@@ -57,3 +57,50 @@
 .roomCard a svg {
   font-size: 1rem;
 }
+
+.userBookings {
+  padding: 1rem;
+}
+
+.singleBooking {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.singleBooking h5 {
+  font-size: 1rem;
+}
+
+.bookingSlots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bookingSingleSlot {
+  padding: 0.5rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slotBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+}
+
+.slotBtn:hover {
+  background-color: grey;
+}

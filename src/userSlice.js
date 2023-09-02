@@ -17,8 +17,8 @@ const userSlice = createSlice({
 
     // Adding new user and setting current user
     addUser(state, action) {
-      if (!state.user.includes(action.payload)) {
-        state.user.push(action.payload);
+      if (!state.users.includes(action.payload)) {
+        state.users.push(action.payload);
       }
       state.currentUser = action.payload;
       state.isLoading = false;

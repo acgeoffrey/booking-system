@@ -1,8 +1,13 @@
+import AllRooms from '../components/AllRooms';
+
+import styles from '../styles/dashboard.module.css';
+
 function Dashboard() {
   return (
-    <div>
+    <main className={styles.dashboard}>
       <h1>Dashboard</h1>
-    </div>
+      <AllRooms />
+    </main>
   );
 }
 

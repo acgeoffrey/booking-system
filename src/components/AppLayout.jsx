@@ -17,12 +17,12 @@ function AppLayout() {
   );
 
   return (
-    <>
+    <div className='app-layout'>
       <Header />
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,41 @@
+.dashboard {
+  height: 100%;
+  padding: 2rem;
+}
+
+.dashboard h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.allRoomsContainer h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.allRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.room {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 7rem;
+  width: 10rem;
+}
+.room a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+}
+
+.room svg {
+}

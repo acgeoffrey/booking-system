@@ -3,7 +3,7 @@ import roomsData from './data/rooms';
 
 const initialState = {
   user: [],
-  currentUser: '',
+  currentUser: 'admin',
   rooms: roomsData,
   isLoading: false,
 };

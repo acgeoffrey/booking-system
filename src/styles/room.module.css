@@ -73,3 +73,9 @@
 .bookBtn:not(:disabled):hover {
   background-color: var(--gray-300);
 }
+
+@media (max-width: 600px) {
+  .allSlots {
+    align-items: center;
+  }
+}

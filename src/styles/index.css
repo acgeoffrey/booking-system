@@ -53,3 +53,9 @@ body {
   background-color: var(--sky-600);
   color: var(--sky-50);
 }
+
+.page-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

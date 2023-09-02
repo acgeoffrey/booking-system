@@ -25,7 +25,7 @@ function UserBookings({ booking }) {
               <HiOutlinePencil />
             </Link>
             <button
-              className={styles.slotBtn}
+              className={styles.delete}
               onClick={(e) =>
                 handleRemove(e, { id: booking.id, slotId: slot.id })
               }

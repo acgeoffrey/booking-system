@@ -4,10 +4,14 @@
 
 .room a {
   margin-bottom: 2rem;
-  color: black;
+  color: var(--emerald-600);
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.room a:hover {
+  color: var(--emerald-700);
 }
 
 .room h2 {
@@ -17,6 +21,7 @@
 .room h4 {
   margin-bottom: 1rem;
   font-size: 1.4rem;
+  color: var(--emerald-600);
 }
 
 .allSlots {
@@ -26,8 +31,10 @@
 }
 
 .slot {
-  border: 1px solid black;
-  background-color: white;
+  border: 2px solid var(--emerald-600);
+  color: var(--gray-600);
+  font-weight: 600;
+  background-color: var(--emerald-50);
   font-family: inherit;
   height: 3rem;
   padding: 0.5rem;
@@ -35,14 +42,34 @@
   cursor: pointer;
 }
 
+.slot:disabled {
+  border-color: var(--gray-800);
+  background-color: var(--gray-300);
+  cursor: not-allowed;
+}
+
+.slot:not(:disabled):hover {
+  background-color: var(--emerald-600);
+  color: var(--emerald-50);
+}
+
 .bookBtn {
-  font-size: inherit;
-  background-color: white;
-  border: 2px solid black;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: var(--gray-50);
+  border: 2px solid var(--gray-600);
   margin-top: 1rem;
   height: 3rem;
   padding: 0.5rem;
   width: 7rem;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+.bookBtn:disabled {
+  cursor: not-allowed;
+}
+
+.bookBtn:not(:disabled):hover {
+  background-color: var(--gray-300);
 }

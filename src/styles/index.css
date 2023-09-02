@@ -19,6 +19,14 @@
   --emerald-500: #10b981;
   --emerald-600: #059669;
   --emerald-700: #047857;
+
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+
+  --rose-50: #fff1f2;
+  --rose-700: #be123c;
 }
 
 * {
@@ -31,6 +39,7 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: 'Rubik', sans-serif;
+  color: var(--gray-900);
 }
 
 .app-layout {
@@ -40,5 +49,7 @@ body {
 }
 
 .active {
-  background-color: orange;
+  border-color: var(--sky-600);
+  background-color: var(--sky-600);
+  color: var(--sky-50);
 }

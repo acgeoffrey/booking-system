@@ -37,9 +37,9 @@ let id = 0;
 while (i < dateEnd) {
   timeInterval.push({
     id,
-    time: `${i.toFormat('HH:mma')}-${i
+    time: `${i.toFormat('HH:mm')} - ${i
       .plus(durationInterval)
-      .toFormat('HH:mma')}`,
+      .toFormat('HH:mm')}`,
     isTaken: '',
   });
   i = i.plus(durationInterval);

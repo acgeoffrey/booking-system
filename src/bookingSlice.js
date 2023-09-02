@@ -36,11 +36,15 @@ const bookingSlice = createSlice({
               if (slot.id === action.payload.slotId) {
                 return {
                   ...slot,
-                  isTaken: action.payload.user,
+                  isTaken: state.currentUser,
                 };
+              } else {
+                return slot;
               }
             }),
           };
+        } else {
+          return room;
         }
       });
 

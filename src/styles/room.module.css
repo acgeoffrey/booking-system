@@ -1,3 +1,48 @@
 .room {
   padding: 2rem;
 }
+
+.room a {
+  margin-bottom: 2rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.room h2 {
+  margin-bottom: 2rem;
+}
+
+.room h4 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.allSlots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.slot {
+  border: 1px solid black;
+  background-color: white;
+  font-family: inherit;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.bookBtn {
+  font-size: inherit;
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 1rem;
+  height: 3rem;
+  padding: 0.5rem;
+  width: 7rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}

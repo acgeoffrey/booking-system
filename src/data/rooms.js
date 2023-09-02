@@ -39,8 +39,7 @@ while (i < dateEnd) {
     time: `${i.toFormat('HH:mma')}-${i
       .plus(durationInterval)
       .toFormat('HH:mma')}`,
-    available: true,
-    user: '',
+    isTaken: '',
   });
   i = i.plus(durationInterval);
   id++;
@@ -54,5 +53,5 @@ rooms = rooms.map((item) => {
   };
 });
 
-console.log(rooms);
+// console.log(rooms);
 export default rooms;

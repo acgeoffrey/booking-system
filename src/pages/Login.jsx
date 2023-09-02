@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addUser } from '../bookingSlice';
+import { addUser } from '../userSlice';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -10,8 +10,14 @@ function Login() {
   const dispatch = useDispatch();
 
   // Checking for current user, if yes redirect to dashboard
-  const currentUser = useSelector((state) => state.booking.currentUser);
-  if (currentUser.length > 0) return navigate('/');
+  const currentUser = useSelector((state) => state.user.currentUser);
+
+  useEffect(
+    function () {
+      if (currentUser) return navigate('/');
+    },
+    [currentUser, navigate]
+  );
 
   // Handling form submission
   function handleSubmit(e) {

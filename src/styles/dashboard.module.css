@@ -8,10 +8,14 @@
   margin-bottom: 2rem;
 }
 
-.allRoomsContainer h2 {
+.dashboard h2 {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+
+.allRoomsContainer {
+  margin-bottom: 2rem;
 }
 
 .allRooms {
@@ -20,19 +24,36 @@
   gap: 1rem;
 }
 
-.room {
+.roomCard {
   padding: 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   height: 7rem;
   width: 10rem;
+  border: 2px solid black;
 }
-.room a {
+
+.roomCardDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.roomIcon {
+  font-size: 2rem;
+}
+
+.roomCard a {
   text-decoration: none;
   color: black;
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.roomCard a svg {
   font-size: 1rem;
 }

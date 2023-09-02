@@ -2,8 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import roomsData from './data/rooms';
 
 const initialState = {
-  user: [],
-  currentUser: 'admin',
   rooms: roomsData,
   isLoading: false,
 };
@@ -17,15 +15,6 @@ const bookingSlice = createSlice({
       state.isLoading = true;
     },
 
-    // Adding new user and setting current user
-    addUser(state, action) {
-      if (!state.user.includes(action.payload)) {
-        state.user.push(action.payload);
-      }
-      state.currentUser = action.payload;
-      state.isLoading = false;
-    },
-
     // Booking slots
     bookRooms(state, action) {
       const rooms = state.rooms.map((room) => {
@@ -36,7 +25,7 @@ const bookingSlice = createSlice({
               if (slot.id === action.payload.slotId) {
                 return {
                   ...slot,
-                  isTaken: state.currentUser,
+                  isTaken: action.payload.user,
                 };
               } else {
                 return slot;
@@ -55,7 +44,7 @@ const bookingSlice = createSlice({
 });
 
 // Export action creators
-export const { setLoading, addUser, bookRooms } = bookingSlice.actions;
+export const { setLoading, addUser, bookRooms, logout } = bookingSlice.actions;
 
 // Export Reducer
 export default bookingSlice.reducer;

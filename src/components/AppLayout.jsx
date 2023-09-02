@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 function AppLayout() {
   const navigate = useNavigate();
-  const currentUser = useSelector((state) => state.booking.currentUser);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   // checking for currentUser, if no redirect to login page
   useEffect(

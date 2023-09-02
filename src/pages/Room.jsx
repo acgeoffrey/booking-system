@@ -13,6 +13,7 @@ function Room() {
   const roomDetails = useSelector((state) =>
     state.booking.rooms.find((item) => item.id === params.id)
   );
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   const [selectSlot, setSelectSlot] = useState(null);
   console.log(roomDetails);
@@ -20,7 +21,9 @@ function Room() {
   function handleBook(e) {
     e.preventDefault();
     if (selectSlot)
-      dispatch(bookRooms({ id: roomDetails.id, slotId: selectSlot }));
+      dispatch(
+        bookRooms({ id: roomDetails.id, slotId: selectSlot, user: currentUser })
+      );
     setSelectSlot(null);
   }
 

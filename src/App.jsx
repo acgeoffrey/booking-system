@@ -12,7 +12,7 @@ import Room from './pages/Room';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename='/booking-system'>
         <Routes>
           <Route element={<AppLayout />}>
             <Route path='/' element={<Dashboard />} />

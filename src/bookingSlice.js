@@ -12,9 +12,12 @@ const bookingSlice = createSlice({
   name: 'booking',
   initialState,
   reducers: {
+    // Set Loading state to true
     setLoading(state) {
       state.isLoading = true;
     },
+
+    // Adding new user and setting current user
     addUser(state, action) {
       if (!state.user.includes(action.payload)) {
         state.user.push(action.payload);
@@ -22,6 +25,8 @@ const bookingSlice = createSlice({
       state.currentUser = action.payload;
       state.isLoading = false;
     },
+
+    // Booking slots
     bookRooms(state, action) {
       const rooms = state.rooms.map((room) => {
         if (room.id === action.payload.id) {
@@ -45,5 +50,8 @@ const bookingSlice = createSlice({
   },
 });
 
+// Export action creators
 export const { setLoading, addUser, bookRooms } = bookingSlice.actions;
+
+// Export Reducer
 export default bookingSlice.reducer;

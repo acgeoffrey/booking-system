@@ -30,6 +30,7 @@ const interval = '00:30';
 const dateEnd = DateTime.fromFormat(endTime, 'HH:mm');
 const durationInterval = Duration.fromISOTime(interval);
 
+// Creating array of time intervals from 9am to 6pm
 let timeInterval = [];
 let i = DateTime.fromFormat(startTime, 'HH:mm');
 let id = 0;
@@ -45,6 +46,7 @@ while (i < dateEnd) {
   id++;
 }
 
+// Creating array of rooms with time intervals
 rooms = rooms.map((item) => {
   return {
     id: item.id,
